@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <script src="itc.js"></script>
+  <head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;800&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <style>
+    body,h1,h2,h3,h5,h6,button,.w3-bar {font-family: "Montserrat", sans-serif }
+    h4{font-family: "Montserrat", sans-serif }
+    h1{font-family: "Montserrat", sans-serif }
+    .fa-anchor,.fa-coffee {font-size:100px}
+    </style>
+  </head>
+<body style="background-color:white;">
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-indigo w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-light-blue w3-large w3-indigo" href="javascript:void(0);" 
+      onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-light-blue">Home</a>
+    <a href="#section1" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-blue">Simple Computations</a>
+    <a href="#section2" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-blue">Income Tax</a>
+    <a href="#section3" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-blue">Nth factorial</a>
+    <a href="#section4" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-blue">Payroll</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-light-blue w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#section1" class="w3-bar-item w3-button w3-padding-large">Simple Computations</a>
+    <a href="#section2" class="w3-bar-item w3-button w3-padding-large">Income Tax</a>
+    <a href="#section3" class="w3-bar-item w3-button w3-padding-large">Nth factorial</a>
+    <a href="#section4" class="w3-bar-item w3-button w3-padding-large">Payroll</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-indigo w3-center" style="padding:64px 16px" id="home">
+  <h1 class="w3-margin w3-jumbo" id="home">SARAH HAW</h1>
+  <p class="w3-xlarge">INTRO TO COMPUTING</p>
+  <h1>&nbsp;</h1>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-pale-blue w3-padding-64 w3-container" id="section1">
+  <div class="w3-content"> 
+    <div class="w3-third w3-center">
+      <i class="fa fa-coffee w3-padding-64 w3-text-indigo w3-margin-right"></i>
+    </div>
+
+    <div class="w3-twothird">
+      <h1>Converters</h1>
+
+      <h3>&nbsp;</h3>
+
+      <h3>Farenheit to Celcius</h3>
+      <h5 class="w3-text-pale-blue">
+        <label>Fahrenheit</label>
+        <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
+        oninput="temperatureConvert1(this.value)"
+        onchange="temperatureConvert1(this.value)">
+      </h5>
+      <h5>Celsius: <span id="outputCelsiusResult"></span></h5>
+
+      <h3>&nbsp;</h3>
+      
+      <h3>Celcius to Farenheit</h3>
+      <h5 class="w3-text-pale-blue">
+        <label>Celsius</label>
+        <input id="inputCelsius" type="number" placeholder="Celsius" 
+        oninput="temperatureConverter1(this.value)" 
+        onchange="temperatureConverter1(this.value)">
+      </h5>
+      <h5>Fahrenheit: <span id="outputFahrenheitResult"></span></h5>
+      
+      <h3>&nbsp;</h3>
+      
+      <h3>Feet to Meters</h3>
+      <h5 class="w3-text-pale-blue">
+        <label>Feet</label>
+        <input id="inputFeet" type="number" placeholder="Feet" 
+        oninput="LengthConvert1(this.value)" 
+        onchange="LengthConvert1(this.value)">
+      </h5>
+      <h5>Meters: <span id="outputMetersResult"></span></h5>
+
+      <h3>&nbsp;</h3>
+      
+      <h3>Meters to Feet:</h3>
+      <h5 class="w3-text-pale-blue">
+       <label>Meters</label>
+       <input id="inputMeters" type="number" placeholder="Meters" 
+       oninput="LengthConverter1(this.value)" 
+       onchange="LengthConverter1(this.value)">
+      </h5>
+      <h5>Feet: <span id="outputFeetResult"></span></h5>
+
+     </div>
+  </div>
+</div>
+
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-white w3-padding-64 w3-container" id="section2">
+    <div class="w3-content">
+      <div class=" w3-center">
+        <i class="fa fa-coffee w3-padding-64 w3-text-indigo w3-margin-right"></i> 
+      </div>
+
+      <div class="w3-twothird" >
+        <h3> Income Tax Calculator </h3>
+        <input id="InputIncome" type="number" placeholder="Income"
+        oninput="IncomeTax(this.value)" 
+        onchange="IncomeTax(this.value)">
+      <h5>&nbsp;</h5>
+      <h5>Income Tax: <span id="outputIncomeTax"></span></h5>
+
+
+      </div>
+    </div>
+</div>
+
+<!-- Third Grid -->
+<div class="w3-row-padding w3-pale-blue w3-padding-64 w3-container" id="section3">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Nth factorial</h1>
+      <h5 class="w3-padding-32">
+
+        
+    </div>
+
+  
+  </div>
+</div>
+
+<!-- Fourth Grid -->
+<div class="w3-row-padding w3-white w3-padding-64 w3-container" id="section4">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <i class="fa fa-coffee w3-padding-64 w3-text-indigo w3-margin-right"></i>
+    </div>
+
+    <div class="w3-twothird">
+      <h1>Payroll</h1>
+      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+      <p class="w3-text-pale-blue">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity"> 
+  <div class="w3-xlarge w3-padding-32">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+ </div>
+ <p>This website was made with W3schools Spaces. Make your own free website today!</p>
+ <a class="w3-button w3-round-xxlarge w3-black w3-margin-bottom" href="https://www.w3schools.com/spaces" target="_blank">Start now</a>
+ <!-- Footer end. -->
+ </footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
